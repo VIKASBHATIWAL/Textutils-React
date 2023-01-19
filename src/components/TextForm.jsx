@@ -63,16 +63,16 @@ props.showAlert("Vowels counted", "success")
                 <textarea onChange={handleChange} className="form-control" style={{backgroundColor: props.mode==="dark"? "grey":"white", color: props.mode==="dark"? "white":"black"}} value={text} id="exampleFormControlTextarea1" rows="8"></textarea>
             </div>
             <button onClick={handleClick} className="btn btn-primary mx-2">Convert to Uppercase</button>
-            <button onClick={handleClick2} className="btn btn-primary mx-2">Convert to Uppercase</button>
+            <button onClick={handleClick2} className="btn btn-primary mx-2">Convert to Lowercase</button>
             <button onClick={handleVoClick} className="btn btn-primary mx-2">Count no. of vowels </button>
-            <button onClick={handleCoClick} className="btn btn-primary mx-2">Count no. of  constant</button>
+            <button onClick={handleCoClick} className="btn btn-primary mx-2">Count no. of  consonants</button>
 
 
         </div>
 
         <div className="container my-2" style={{color: props.mode==="dark"? "white":"black"}}>
             <h3>Text Summary</h3>
-            <p>{text.split(' ').join('').length} words and {text.length} characters</p>
+            <p>{text.split(' ').length} words and {text.length} characters</p>
             <h3>{0.008 * text.split(" ").length} minutes to read</h3>
             <h3>Preview</h3>
             <p>{text.length>0?text:"To preview write something above"}</p>
